@@ -1,0 +1,972 @@
+@media all and (min-width: 1164px){
+  .header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // background: linear-gradient(rgba(6, 7, 7, 0) 10%, rgb(6, 6, 7)),
+    //   url("https://images.pexels.com/photos/18119175/pexels-photo-18119175/free-photo-of-ville-gens-personnes-individus.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    //     no-repeat center center;
+    // background-size: cover;
+    animation: fadeIn 1.5s ease-out, slideUp 1.5s ease-out;
+  
+    .headContainer {
+      width: 95%;
+      max-width: 1600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      position: relative;
+      padding-top: 4em;
+      gap: 40px;
+      padding-left: 200px;
+      animation: fadeIn 2s ease-out, slideUp 2s ease-out;
+  
+      .info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        color: white;
+        margin-left: -180px;
+        font-size: 1.2rem;
+        p {
+          margin-top: 0px !important;
+          margin-bottom: 0px !important;
+          font-weight: 400;
+        }
+        .line {
+          width: 140px;
+          height: 2px;
+          background-color: white;
+        }
+      }
+  
+      .title {
+        font-size: 8rem;
+        text-transform: uppercase;
+        color: white;
+        line-height: 6rem;
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        margin-bottom: 0px !important;
+        animation: smoke 5s forwards;
+  
+        .iconeYoutube {
+          font-size: 0.8em;
+          align-self: center;
+          transform: rotate(-20deg);
+          color: red;
+        }
+  
+        .strokeTitle {
+          text-transform: capitalize;
+          letter-spacing: -2px;
+          -webkit-text-stroke: 0.4px white;
+          color: transparent;
+          opacity: 1;
+          font-size: 5rem;
+          font-weight: 300;
+        }
+      }
+  
+      .forms {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn 3s ease-out, slideUp 3s ease-out;
+  
+        input {
+          padding: 12px 20px;
+          border-radius: 20px;
+          background-color: rgba(255, 255, 255, 0.8);
+          backdrop-filter: blur(6px);
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          font-size: 1em;
+          color: #333;
+          outline: none;
+          transition: background-color 0.3s, box-shadow 0.3s;
+          &:focus {
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+          }
+        }
+  
+        button {
+          padding: 10px 20px 10px 60px;
+          border-radius: 28px;
+          background-color: rgba(160, 160, 160, 0.3);
+          backdrop-filter: blur(6px);
+          color: white;
+          border: none;
+          cursor: pointer;
+          font-size: 1em;
+          outline: none;
+          border: none;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 16px -4px;
+          border: 0.4px rgba(255, 255, 255, 0.1) solid;
+          transition: background-color 0.3s, box-shadow 0.3s;
+          text-transform: uppercase;
+          font-family: "Roboto", sans-serif;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          transition: all 0.4s ease;
+  
+          .iconePlus {
+            font-size: 1.6em;
+          }
+  
+          &:active {
+            background-color: rgba(255, 255, 255, 1);
+          }
+  
+          &:disabled {
+            background-color: rgba(160, 160, 160, 0.2);
+            cursor: not-allowed;
+            box-shadow: none;
+          }
+  
+          &::after {
+            background-color: #ffffff;
+            bottom: -1px;
+            -webkit-clip-path: inset(0 0 0 0 round 24px);
+            content: "+";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-size: 2em;
+            left: 0;
+            pointer-events: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: -webkit-clip-path 0.3s ease;
+            transition: clip-path 0.3s ease;
+            transition: clip-path 0.3s ease, -webkit-clip-path 0.3s ease;
+            width: 50px;
+            z-index: -1;
+            transition: width 0.4s ease;
+          }
+  
+          &:focus {
+            background-color: rgba(160, 160, 160, 0.5);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:after {
+              width: 100%;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              padding-left: 24px;
+            }
+          }
+  
+          &:hover {
+            background-color: rgba(160, 160, 160, 0.5);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:after {
+              width: 100%;
+              display: flex;
+              content: "#";
+              justify-content: flex-start;
+              align-items: center;
+              padding-left: 20px;
+            }
+          }
+        }
+      }
+  
+      /* Animation for text */
+      @keyframes smoke {
+        0% {
+          color: transparent;
+          top: 100%;
+        }
+  
+        100% {
+          top: 50%;
+          color: white;
+        }
+      }
+  
+      .description {
+        text-align: center;
+        width: 800px;
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+@media all and (max-width: 1164px) and (min-width: 780px){
+  .header {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // background: linear-gradient(rgba(6, 7, 7, 0) 10%, rgb(6, 6, 7)),
+    //   url("https://images.pexels.com/photos/18119175/pexels-photo-18119175/free-photo-of-ville-gens-personnes-individus.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    //     no-repeat center center;
+    // background-size: cover;
+    animation: fadeIn 1.5s ease-out, slideUp 1.5s ease-out;
+  
+    .headContainer {
+      width: 95%;
+      max-width: 1600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      position: relative;
+      padding-top: 7em;
+      gap: 40px;
+      animation: fadeIn 2s ease-out, slideUp 2s ease-out;
+  
+      .info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        color: white;
+        font-size: 1.2rem;
+        p {
+          margin-top: 0px !important;
+          margin-bottom: 0px !important;
+          font-weight: 400;
+        }
+        .line {
+          width: 140px;
+          height: 2px;
+          background-color: white;
+        }
+      }
+  
+      .title {
+        font-size: 6rem;
+        text-transform: uppercase;
+        color: white;
+        line-height: 6rem;
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        margin-bottom: 0px !important;
+        animation: smoke 5s forwards;
+  
+        .iconeYoutube {
+          font-size: 0.7em;
+          align-self: center;
+          transform: rotate(-20deg);
+          color: red;
+        }
+  
+        .strokeTitle {
+          text-transform: capitalize;
+          letter-spacing: -2px;
+          -webkit-text-stroke: 0.4px white;
+          color: transparent;
+          opacity: 1;
+          font-size: 4rem;
+          font-weight: 300;
+        }
+      }
+  
+      .forms {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: flex-start;
+        align-items: center;
+        animation: fadeIn 3s ease-out, slideUp 3s ease-out;
+  
+        input {
+          padding: 12px 20px;
+          border-radius: 20px;
+          background-color: rgba(255, 255, 255, 0.8);
+          backdrop-filter: blur(6px);
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          font-size: 1em;
+          color: #333;
+          outline: none;
+          transition: background-color 0.3s, box-shadow 0.3s;
+          &:focus {
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+          }
+        }
+  
+        button {
+          padding: 10px 20px 10px 60px;
+          border-radius: 28px;
+          background-color: rgba(160, 160, 160, 0.3);
+          backdrop-filter: blur(6px);
+          color: white;
+          border: none;
+          cursor: pointer;
+          font-size: 1em;
+          outline: none;
+          border: none;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 16px -4px;
+          border: 0.4px rgba(255, 255, 255, 0.1) solid;
+          transition: background-color 0.3s, box-shadow 0.3s;
+          text-transform: uppercase;
+          font-family: "Roboto", sans-serif;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          transition: all 0.4s ease;
+  
+          .iconePlus {
+            font-size: 1.6em;
+          }
+  
+          &:active {
+            background-color: rgba(255, 255, 255, 1);
+          }
+  
+          &:disabled {
+            background-color: rgba(160, 160, 160, 0.2);
+            cursor: not-allowed;
+            box-shadow: none;
+          }
+  
+          &::after {
+            background-color: #ffffff;
+            bottom: -1px;
+            -webkit-clip-path: inset(0 0 0 0 round 24px);
+            content: "+";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-size: 2em;
+            left: 0;
+            pointer-events: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: -webkit-clip-path 0.3s ease;
+            transition: clip-path 0.3s ease;
+            transition: clip-path 0.3s ease, -webkit-clip-path 0.3s ease;
+            width: 50px;
+            z-index: -1;
+            transition: width 0.4s ease;
+          }
+  
+          &:focus {
+            background-color: rgba(160, 160, 160, 0.5);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:after {
+              width: 100%;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              padding-left: 24px;
+            }
+          }
+  
+          &:hover {
+            background-color: rgba(160, 160, 160, 0.5);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:after {
+              width: 100%;
+              display: flex;
+              content: "#";
+              justify-content: flex-start;
+              align-items: center;
+              padding-left: 20px;
+            }
+          }
+        }
+      }
+  
+      /* Animation for text */
+      @keyframes smoke {
+        0% {
+          color: transparent;
+          top: 100%;
+        }
+  
+        100% {
+          top: 50%;
+          color: white;
+        }
+      }
+  
+      .description {
+        text-align: center;
+        width: 800px;
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+@media all and (max-width: 780px) and (min-width: 480px){
+  .header {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // background: linear-gradient(rgba(6, 7, 7, 0) 10%, rgb(6, 6, 7)),
+    //   url("https://images.pexels.com/photos/18119175/pexels-photo-18119175/free-photo-of-ville-gens-personnes-individus.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    //     no-repeat center center;
+    // background-size: cover;
+    animation: fadeIn 1.5s ease-out, slideUp 1.5s ease-out;
+  
+    .headContainer {
+      width: 90%;
+      max-width: 1600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      position: relative;
+      padding-top: 7em;
+      gap: 40px;
+      animation: fadeIn 2s ease-out, slideUp 2s ease-out;
+  
+      .info {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 6px;
+        color: white;
+        font-size: 1.8rem;
+        p {
+          margin-top: 0px !important;
+          margin-bottom: 0px !important;
+          font-weight: 400;
+          width: 100%;
+        }
+        .line {
+          width: 100%;
+          height: 2px;
+          background-color: white;
+        }
+      }
+  
+      .title {
+        font-size: 4rem;
+        text-transform: uppercase;
+        color: white;
+        line-height: 6rem;
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        margin-bottom: 0px !important;
+        animation: smoke 5s forwards;
+  
+        .iconeYoutube {
+          font-size: 0.7em;
+          align-self: center;
+          transform: rotate(-20deg);
+          color: red;
+        }
+  
+        .strokeTitle {
+          text-transform: capitalize;
+          letter-spacing: -2px;
+          -webkit-text-stroke: 0.4px white;
+          color: transparent;
+          opacity: 1;
+          font-size: 4rem;
+          font-weight: 300;
+        }
+      }
+  
+      .forms {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        justify-content: flex-start;
+        align-items: center;
+        animation: fadeIn 3s ease-out, slideUp 3s ease-out;
+        margin: auto;
+  
+        input {
+          width: 100%;
+          padding: 12px 20px;
+          border-radius: 20px;
+          background-color: rgba(255, 255, 255, 0.8);
+          backdrop-filter: blur(6px);
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          font-size: 1em;
+          color: #333;
+          outline: none;
+          transition: background-color 0.3s, box-shadow 0.3s;
+          &:focus {
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+          }
+        }
+  
+        button {
+          padding: 10px 20px 10px 60px;
+          border-radius: 28px;
+          background-color: rgba(160, 160, 160, 0.3);
+          backdrop-filter: blur(6px);
+          color: white;
+          border: none;
+          cursor: pointer;
+          font-size: 1em;
+          outline: none;
+          border: none;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 16px -4px;
+          border: 0.4px rgba(255, 255, 255, 0.1) solid;
+          transition: background-color 0.3s, box-shadow 0.3s;
+          text-transform: uppercase;
+          font-family: "Roboto", sans-serif;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          transition: all 0.4s ease;
+          align-self: flex-start;
+  
+          .iconePlus {
+            font-size: 1.6em;
+          }
+  
+          &:active {
+            background-color: rgba(255, 255, 255, 1);
+          }
+  
+          &:disabled {
+            background-color: rgba(160, 160, 160, 0.2);
+            cursor: not-allowed;
+            box-shadow: none;
+          }
+  
+          &::after {
+            background-color: #ffffff;
+            bottom: -1px;
+            -webkit-clip-path: inset(0 0 0 0 round 24px);
+            content: "+";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-size: 2em;
+            left: 0;
+            pointer-events: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: -webkit-clip-path 0.3s ease;
+            transition: clip-path 0.3s ease;
+            transition: clip-path 0.3s ease, -webkit-clip-path 0.3s ease;
+            width: 50px;
+            z-index: -1;
+            transition: width 0.4s ease;
+          }
+  
+          &:focus {
+            background-color: rgba(160, 160, 160, 0.5);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:after {
+              width: 100%;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              padding-left: 24px;
+            }
+          }
+  
+          &:hover {
+            background-color: rgba(160, 160, 160, 0.5);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:after {
+              width: 100%;
+              display: flex;
+              content: "#";
+              justify-content: flex-start;
+              align-items: center;
+              padding-left: 20px;
+            }
+          }
+        }
+      }
+      .forms:nth-of-type(3) {
+        margin-bottom: 4em;
+      }
+  
+      /* Animation for text */
+      @keyframes smoke {
+        0% {
+          color: transparent;
+          top: 100%;
+        }
+  
+        100% {
+          top: 50%;
+          color: white;
+        }
+      }
+  
+      .description {
+        text-align: center;
+        width: 800px;
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 480px){
+  .header {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-position: 56% 78% !important;
+    // background: linear-gradient(rgba(6, 7, 7, 0) 10%, rgb(6, 6, 7)),
+    //   url("https://images.pexels.com/photos/18119175/pexels-photo-18119175/free-photo-of-ville-gens-personnes-individus.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    //     no-repeat center center;
+    // background-size: cover;
+    animation: fadeIn 1.5s ease-out, slideUp 1.5s ease-out;
+  
+    .headContainer {
+      width: 90%;
+      max-width: 1600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      position: relative;
+      padding-top: 7em;
+      gap: 40px;
+      animation: fadeIn 2s ease-out, slideUp 2s ease-out;
+  
+      .info {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 6px;
+        color: white;
+        font-size: 1.8rem;
+        p {
+          margin-top: 0px !important;
+          margin-bottom: 0px !important;
+          font-weight: 400;
+          width: 100%;
+        }
+        .line {
+          width: 100%;
+          height: 2px;
+          background-color: white;
+        }
+      }
+  
+      .title {
+        width: 100%;
+        font-size: 6rem;
+        text-transform: uppercase;
+        color: white;
+        line-height: 6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        gap: 12px;
+        margin-bottom: 0px !important;
+        animation: smoke 5s forwards;
+        position: relative;
+        z-index: 2;
+  
+        .iconeYoutube {
+          font-size: 1.2em;
+          align-self: flex-start;
+          transform: rotate(-37deg);
+          color: red;
+          position: absolute;
+          right: 12px;
+          z-index: -1;
+        }
+  
+        .strokeTitle {
+          text-transform: capitalize;
+          letter-spacing: -2px;
+          -webkit-text-stroke: 0.4px white;
+          color: transparent;
+          opacity: 1;
+          font-size: 6rem;
+          font-weight: 300;
+        }
+      }
+  
+      .forms {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        justify-content: flex-start;
+        align-items: center;
+        animation: fadeIn 3s ease-out, slideUp 3s ease-out;
+        margin: auto;
+  
+        input {
+          width: 100%;
+          padding: 12px 20px;
+          border-radius: 20px;
+          background-color: rgba(255, 255, 255, 0.8);
+          backdrop-filter: blur(6px);
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          font-size: 1em;
+          color: #333;
+          outline: none;
+          transition: background-color 0.3s, box-shadow 0.3s;
+          &:focus {
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+          }
+        }
+  
+        button {
+          padding: 10px 20px 10px 60px;
+          border-radius: 28px;
+          background-color: rgba(160, 160, 160, 0.3);
+          backdrop-filter: blur(6px);
+          color: white;
+          border: none;
+          cursor: pointer;
+          font-size: 1em;
+          outline: none;
+          border: none;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 16px -4px;
+          border: 0.4px rgba(255, 255, 255, 0.1) solid;
+          transition: background-color 0.3s, box-shadow 0.3s;
+          text-transform: uppercase;
+          font-family: "Roboto", sans-serif;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          transition: all 0.4s ease;
+          align-self: flex-start;
+  
+          .iconePlus {
+            font-size: 1.6em;
+          }
+  
+          &:active {
+            background-color: rgba(255, 255, 255, 1);
+          }
+  
+          &:disabled {
+            background-color: rgba(160, 160, 160, 0.2);
+            cursor: not-allowed;
+            box-shadow: none;
+          }
+  
+          &::after {
+            background-color: #ffffff;
+            bottom: -1px;
+            -webkit-clip-path: inset(0 0 0 0 round 24px);
+            content: "+";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-size: 2em;
+            left: 0;
+            pointer-events: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: -webkit-clip-path 0.3s ease;
+            transition: clip-path 0.3s ease;
+            transition: clip-path 0.3s ease, -webkit-clip-path 0.3s ease;
+            width: 50px;
+            z-index: -1;
+            transition: width 0.4s ease;
+          }
+  
+          &:focus {
+            background-color: rgba(160, 160, 160, 0.5);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:after {
+              width: 100%;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              padding-left: 24px;
+            }
+          }
+  
+          &:hover {
+            background-color: rgba(160, 160, 160, 0.5);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:after {
+              width: 100%;
+              display: flex;
+              content: "#";
+              justify-content: flex-start;
+              align-items: center;
+              padding-left: 20px;
+            }
+          }
+        }
+      }
+      .forms:nth-of-type(3) {
+        margin-bottom: 4em;
+      }
+  
+      /* Animation for text */
+      @keyframes smoke {
+        0% {
+          color: transparent;
+          top: 100%;
+        }
+  
+        100% {
+          top: 50%;
+          color: white;
+        }
+      }
+  
+      .description {
+        text-align: center;
+        width: 800px;
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+  
+  /* Keyframes for the fade-in effect */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Keyframes for the slide-up effect */
+  @keyframes slideUp {
+    0% {
+      transform: translateY(20px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+
+
+// .header{
+//     width: 100%;
+//     // height: 450px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     position: relative;
+//     overflow-y: hidden;
+//     padding-bottom: 8em;
+//     background-color: #1a1a1a;
+//     .title{
+//         color: rgb(255, 255, 255);
+//         text-transform: uppercase;
+//         .addRed{
+//             color: #C1F6BC;
+//         }
+//         .addBlue{
+//             color: #ADCD52;
+//         }
+//     }
+//     .description{
+//         text-align: center;
+//         width: 800px;
+//         font-family: 'Montserrat';
+//         font-weight: 600;
+//         font-size: 1.2rem;
+//         color: rgb(255, 255, 255);
+//     }
+//     .heroImage{
+//         width: 340px;
+//         position: absolute;
+//         right: 0;
+//         margin-right: 160px;
+//         top: 90px;
+//         opacity: 0.8;
+//         z-index: 0;
+//     }
+//     .separator{
+//         width: 150px;
+//         height: 3px;
+//         background-color: #B1B1B1;
+//         position: absolute;
+//         bottom: 0;
+//         margin: auto;
+//     }
+// }

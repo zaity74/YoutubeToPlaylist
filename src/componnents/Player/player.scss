@@ -1,0 +1,437 @@
+@media all and (min-width: 1250px){
+  .player {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0.8em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .current-song {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: white;
+        width: 16%;
+        padding: 0.8em;
+    
+        img {
+          width: 60px;
+          height: 60px;
+        //   border-radius: 50%;
+          object-fit: cover;
+        }
+        .songInfo{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            h4 {
+                margin: 0;
+                font-size: 0.9rem;
+              }
+          
+              p {
+                margin: 0;
+                font-size: 0.9rem;
+                color: #a1a1a1;
+              }
+        }
+    
+      }
+    .playContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 2;
+        margin-left: -55px;
+        padding: 0.3em;
+        color: white;
+        .controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        
+            button {
+              background: none;
+              border: none;
+              color: white;
+              font-size: 1.5rem;
+              cursor: pointer;
+              transition: transform 0.2s;
+        
+              &:hover {
+                transform: scale(1.1);
+              }
+        
+              &.btn-primary {
+                  background-color: #ffffff;
+                  padding: 10px;
+                  border-radius: 92%;
+                  width: 50px;
+                  height: 50px;
+                  color: black;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+              }
+        
+              &.btn-secondary {
+                background-color: transparent;
+                padding: 10px;
+              }
+        
+              &.active-btn {
+                color: #ff3b3f;
+              }
+            }
+          }
+        
+          .progress-container {
+            display: flex;
+            align-items: center;
+            width: 60%;
+        
+            input[type="range"] {
+              flex: 1;
+              margin: 0 10px;
+              -webkit-appearance: none;
+              appearance: none;
+              width: 100%;
+              height: 5px;
+              background: #333;
+              outline: none;
+              opacity: 0.7;
+              transition: opacity 0.2s;
+        
+              &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 15px;
+                height: 15px;
+                background: #ff3b3f;
+                cursor: pointer;
+                border-radius: 50%;
+              }
+        
+              &::-moz-range-thumb {
+                width: 15px;
+                height: 15px;
+                background: #ff3b3f;
+                cursor: pointer;
+                border-radius: 50%;
+              }
+            }
+        
+            .time {
+              display: flex;
+              gap: 5px;
+              font-size: 0.9rem;
+        
+              span {
+                color: #a1a1a1;
+              }
+            }
+          }
+    }
+  }
+}
+
+@media all and (max-width: 1250px) and (min-width: 480px){
+  .player {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.8em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .current-song {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        color: white;
+        padding: 0.8em;
+    
+        img {
+          width: 60px;
+          height: 60px;
+        //   border-radius: 50%;
+          object-fit: cover;
+        }
+        .songInfo{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            h4 {
+                margin: 0;
+                font-size: 0.9rem;
+              }
+          
+              p {
+                margin: 0;
+                font-size: 0.9rem;
+                color: #a1a1a1;
+              }
+        }
+    
+      }
+    .playContainer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 2;
+        padding: 0.3em;
+        color: white;
+        .controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        
+            button {
+              background: none;
+              border: none;
+              color: white;
+              font-size: 1.5rem;
+              cursor: pointer;
+              transition: transform 0.2s;
+        
+              &:hover {
+                transform: scale(1.1);
+              }
+        
+              &.btn-primary {
+                  background-color: #ffffff;
+                  padding: 10px;
+                  border-radius: 92%;
+                  width: 50px;
+                  height: 50px;
+                  color: black;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+              }
+        
+              &.btn-secondary {
+                background-color: transparent;
+                padding: 10px;
+              }
+        
+              &.active-btn {
+                color: #ff3b3f;
+              }
+            }
+          }
+        
+          .progress-container {
+            display: flex;
+            align-items: center;
+            width: 80%;
+        
+            input[type="range"] {
+              flex: 1;
+              margin: 0 10px;
+              -webkit-appearance: none;
+              appearance: none;
+              width: 100%;
+              height: 5px;
+              background: #333;
+              outline: none;
+              opacity: 0.7;
+              transition: opacity 0.2s;
+        
+              &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 15px;
+                height: 15px;
+                background: #ff3b3f;
+                cursor: pointer;
+                border-radius: 50%;
+              }
+        
+              &::-moz-range-thumb {
+                width: 15px;
+                height: 15px;
+                background: #ff3b3f;
+                cursor: pointer;
+                border-radius: 50%;
+              }
+            }
+        
+            .time {
+              display: flex;
+              gap: 5px;
+              font-size: 0.9rem;
+        
+              span {
+                color: #a1a1a1;
+              }
+            }
+          }
+    }
+  }
+}
+@media all and (max-width: 480px){
+  .player {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.8em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .current-song {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        color: white;
+        padding: 0.8em;
+    
+        img {
+          width: 60px;
+          height: 60px;
+        //   border-radius: 50%;
+          object-fit: cover;
+        }
+        .songInfo{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            h4 {
+                margin: 0;
+                font-size: 0.9rem;
+              }
+          
+              p {
+                margin: 0;
+                font-size: 0.9rem;
+                color: #a1a1a1;
+              }
+        }
+    
+      }
+    .playContainer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 2;
+        padding: 0.3em;
+        color: white;
+        .controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        
+            button {
+              background: none;
+              border: none;
+              color: white;
+              font-size: 1.5rem;
+              cursor: pointer;
+              transition: transform 0.2s;
+        
+              &:hover {
+                transform: scale(1.1);
+              }
+        
+              &.btn-primary {
+                  background-color: #ffffff;
+                  padding: 10px;
+                  border-radius: 92%;
+                  width: 50px;
+                  height: 50px;
+                  color: black;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+              }
+        
+              &.btn-secondary {
+                background-color: transparent;
+                padding: 10px;
+              }
+        
+              &.active-btn {
+                color: #ff3b3f;
+              }
+            }
+          }
+        
+          .progress-container {
+            display: flex;
+            align-items: center;
+            width: 95%;
+        
+            input[type="range"] {
+              flex: 1;
+              margin: 0 10px;
+              -webkit-appearance: none;
+              appearance: none;
+              width: 100%;
+              height: 5px;
+              background: #333;
+              outline: none;
+              opacity: 0.7;
+              transition: opacity 0.2s;
+        
+              &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 15px;
+                height: 15px;
+                background: #ff3b3f;
+                cursor: pointer;
+                border-radius: 50%;
+              }
+        
+              &::-moz-range-thumb {
+                width: 15px;
+                height: 15px;
+                background: #ff3b3f;
+                cursor: pointer;
+                border-radius: 50%;
+              }
+            }
+        
+            .time {
+              display: flex;
+              gap: 5px;
+              font-size: 0.9rem;
+        
+              span {
+                color: #a1a1a1;
+              }
+            }
+          }
+    }
+  }
+}
+
+  
