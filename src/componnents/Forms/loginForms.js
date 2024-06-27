@@ -106,8 +106,8 @@ function LoginForm(props) {
                             <Link to={'/register'}>Create an account</Link>
                         </div>
                         <hr></hr>
-                        <p style={{fontSize: '0.8rem'}}>Demo email : mrdemo.app@gmail.com</p>
-                        <p style={{fontSize: '0.8rem'}}>Demo password : applicationsport123</p>
+                        <p style={{fontSize: '0.8rem'}}>Demo email : john.doe@gmail.com</p>
+                        <p style={{fontSize: '0.8rem'}}>Demo password : Chocolat201297$</p>
                     </div>
                 </div>
 
