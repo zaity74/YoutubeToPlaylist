@@ -45,7 +45,7 @@ export const addToHistory = (id, params) => async (dispatch, getState) => {
   
       // Faire la requête API pour ajouter un produit au panier
       const response = await axios.post(
-        `http://localhost:3100/api/v1/history/add-history`,
+        `https://youtubetoplaylist-backend.onrender.com/api/v1/history/add-history`,
         body,
         config
       );
@@ -95,7 +95,7 @@ export const getUserHistory = () => async (dispatch, getState) => {
       dispatch({ type: 'FETCH_HISTORY_REQUEST' });
   
       // Faire la requête API pour afficher les produits du panier en fonction de l'utilisateur
-      const response = await axios.get(`http://localhost:3100/api/v1/history/get-history`, config);
+      const response = await axios.get(`https://youtubetoplaylist-backend.onrender.com/api/v1/history/get-history`, config);
   
       dispatch({
         type: 'FETCH_HISTORY_SUCCESS',

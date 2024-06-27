@@ -47,7 +47,7 @@ export const createSong = (params) => async (dispatch, getState) => {
       dispatch({ type: 'CREATE_SONG_REQUEST'});
   
       // API de connexion
-      const response = await axios.post(`http://localhost:3100/api/v1/songs/create-song`, body, config);
+      const response = await axios.post(`https://youtubetoplaylist-backend.onrender.com/api/v1/songs/create-song`, body, config);
 
   
       dispatch({
@@ -100,7 +100,7 @@ export const allSongs = (params) => async (dispatch,getState) => {
 
       // Get the data from the API
       dispatch({ type: 'FETCH_SONGS_REQUEST' });
-      const response = await axios.get(`http://localhost:3100/api/v1/songs/all-songs`, {
+      const response = await axios.get(`https://youtubetoplaylist-backend.onrender.com/api/v1/songs/all-songs`, {
             params: { page, title, genre, artiste, sortField, sortOrder, limit },
             ...config,
         });
@@ -144,7 +144,7 @@ export const removeSong = (id) => async (dispatch, getState) => {
      };
 
       dispatch({ type: 'REMOVE_SONG_REQUEST' });
-      const response = await axios.delete(`http://localhost:3100/api/v1/songs/remove-song/${id}`, config);
+      const response = await axios.delete(`https://youtubetoplaylist-backend.onrender.com/api/v1/songs/remove-song/${id}`, config);
       
 
       dispatch({ 
@@ -185,7 +185,7 @@ export const clearAllSong = () => async (dispatch, getState) => {
   
       dispatch({ type: 'CLEAR_ALL_SONG_REQUEST' });
   
-      await axios.delete('http://localhost:3100/api/v1/songs/clear', config);
+      await axios.delete('https://youtubetoplaylist-backend.onrender.com/api/v1/songs/clear', config);
   
       dispatch({ type: 'CLEAR_ALL_SONG__SUCCESS' });
   

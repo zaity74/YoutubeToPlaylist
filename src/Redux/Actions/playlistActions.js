@@ -44,7 +44,7 @@ export const addToPlaylist = (id, params) => async (dispatch, getState) => {
   
       // Faire la requête API pour ajouter un produit au panier
       const response = await axios.post(
-        `http://localhost:3100/api/v1/playlist/add-to-playlist`,
+        `https://youtubetoplaylist-backend.onrender.com/api/v1/playlist/add-to-playlist`,
         body,
         config
       );
@@ -96,7 +96,7 @@ export const fetchAllPlaylist = (params) => async (dispatch, getState) => {
 
     // Faire la requête API pour ajouter un produit au panier
     const response = await axios.get(
-      `http://localhost:3100/api/v1/playlist/fetch-all-playlists`,
+      `https://youtubetoplaylist-backend.onrender.com/api/v1/playlist/fetch-all-playlists`,
       config
     );
 
@@ -137,7 +137,7 @@ export const fetchPlaylistDetail = (id) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`http://localhost:3100/api/v1/playlist/${id}`, config);
+    const { data } = await axios.get(`https://youtubetoplaylist-backend.onrender.com/api/v1/playlist/${id}`, config);
 
     dispatch({
       type: 'FETCH_PLAYLIST_DETAIL_SUCCESS',
@@ -191,7 +191,7 @@ export const createPlaylist = (params) => async (dispatch, getState) => {
       dispatch({ type: 'CREATE_PLAYLIST_REQUEST'});
   
       // API de connexion
-      const response = await axios.post(`http://localhost:3100/api/v1/playlist/create-playlist`, body, config);
+      const response = await axios.post(`https://youtubetoplaylist-backend.onrender.com/api/v1/playlist/create-playlist`, body, config);
 
   
       dispatch({
@@ -237,7 +237,7 @@ export const deletePlaylist = (id,params) => async (dispatch, getState) => {
       dispatch({ type: 'DELETE_PLAYLIST_REQUEST'});
   
       // API de connexion
-      const response = await axios.delete(`http://localhost:3100/api/v1/playlist/delete-playlist/${id}`, config);
+      const response = await axios.delete(`https://youtubetoplaylist-backend.onrender.com/api/v1/playlist/delete-playlist/${id}`, config);
 
   
       dispatch({
@@ -278,7 +278,7 @@ export const deleteAllPlaylist = () => async (dispatch, getState) => {
   
       dispatch({ type: 'DELETE_ALL_PLAYLIST_REQUEST' });
   
-      await axios.delete('http://localhost:3100/api/v1/playlist/clear', config);
+      await axios.delete('https://youtubetoplaylist-backend.onrender.com/api/v1/playlist/clear', config);
   
       dispatch({ type: 'DELETE_ALL_PLAYLIST_SUCCESS' });
   

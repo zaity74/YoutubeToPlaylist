@@ -22,7 +22,7 @@ export const userLogin = (email, password, access) => async (dispatch, getState)
     }
 
     // API de connexion
-    const response = await axios.post(`http://localhost:3100/api/v1/users/login`, {
+    const response = await axios.post(`https://youtubetoplaylist-backend.onrender.com/api/v1/users/login`, {
       password,
       email,
     }, config);
@@ -61,7 +61,7 @@ export const userRegister = (firstname, lastname, email, password) => async (dis
             }
         };
 
-        const response = await axios.post('http://localhost:3100/api/v1/users/register', {
+        const response = await axios.post('https://youtubetoplaylist-backend.onrender.com/api/v1/users/register', {
             firstname,
             lastname,
             email,
@@ -108,7 +108,7 @@ export const userLogout = () => async (dispatch) => {
     // Déclenchement de la requete de déconnexion
     dispatch({ type: 'USER_LOGOUT_REQUEST' });
 
-    await axios.get('http://localhost:3100/api/v1/users/logout', config);
+    await axios.get('https://youtubetoplaylist-backend.onrender.com/api/v1/users/logout', config);
 
     localStorage.removeItem('loginToken');
     localStorage.removeItem('loginInfo');
@@ -132,7 +132,7 @@ export const forgotPassword = (email) => async (dispatch, getState) => {
         'Content-type': 'application/json'
       }
     }
-    const response = await axios.post(`http://localhost:3100/api/v1/users/forgot-password`, {
+    const response = await axios.post(`https://youtubetoplaylist-backend.onrender.com/api/v1/users/forgot-password`, {
       email,
     }, config);
 
